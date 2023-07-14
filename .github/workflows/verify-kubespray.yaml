@@ -5,6 +5,12 @@ on:
   schedule:
     - cron: '0 18 * * *'
 
+env:
+  VSPHERE_USER: ${{ secrets.VSPHERE_USER }}
+  VSPHERE_PASSWD: ${{ secrets.VSPHERE_PASSWD }}
+  AMD_ROOT_PASSWORD: ${{ secrets.AMD_ROOT_PASSWORD }}
+  KYLIN_VM_PASSWORD: ${{ secrets.KYLIN_VM_PASSWORD }}
+
 jobs:
   output-variable:
     runs-on: ubuntu-latest
